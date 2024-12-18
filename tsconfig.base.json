@@ -15,12 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ng-doc/generated": [
-        "./ng-doc/ngx-daisyui/index.ts"
-      ],
-      "@ng-doc/generated/*": [
-        "./ng-doc/ngx-daisyui/*"
-      ]
+      "@daisyui/kit/button": ["kit/button/src/index.ts"],
+      "@ng-doc/generated": ["./ng-doc/ngx-daisyui/index.ts"],
+      "@ng-doc/generated/*": ["./ng-doc/ngx-daisyui/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
