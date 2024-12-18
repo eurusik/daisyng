@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ng-doc/generated": [
+        "./ng-doc/ngx-daisyui/index.ts"
+      ],
+      "@ng-doc/generated/*": [
+        "./ng-doc/ngx-daisyui/*"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
