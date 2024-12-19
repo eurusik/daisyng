@@ -1,0 +1,26 @@
+<ng-doc-root
+  [sidebar]="!isLandingPage"
+  [noWidthLimit]="isLandingPage"
+  [footerContent]="footerContent">
+  <ng-doc-navbar [hamburger]="!isLandingPage">
+    <docs-logo ngDocNavbarLeft text="ngx-daisyUI"/>
+    <div @preventInitialChild class="ng-doc-header-controls" ngDocNavbarRight>
+      <ng-doc-theme-toggle></ng-doc-theme-toggle>
+      <a
+        href="https://github.com/eurusik/ngx-daisyui"
+        ng-doc-button-icon
+        ngDocTooltip="Repository on GitHub"
+        size="large"
+        target="_blank">
+        <ng-doc-icon [size]="24" customIcon="github"></ng-doc-icon>
+      </a>
+    </div>
+  </ng-doc-navbar>
+
+  <ng-doc-sidebar></ng-doc-sidebar>
+  <router-outlet></router-outlet>
+
+  <ng-template #footerContent>
+    <div class="ng-doc-footer">by Eugene Rusakov</div>
+  </ng-template>
+</ng-doc-root>

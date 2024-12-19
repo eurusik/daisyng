@@ -15,6 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@daisyui/docs": ["docs/src/index.ts"],
+      "@daisyui/docs/landing/introduce": [
+        "docs/src/lib/landing/introduce/index.ts"
+      ],
       "@daisyui/kit/button": ["kit/button/src/index.ts"],
       "@ng-doc/generated": ["./ng-doc/ngx-daisyui/index.ts"],
       "@ng-doc/generated/*": ["./ng-doc/ngx-daisyui/*"]

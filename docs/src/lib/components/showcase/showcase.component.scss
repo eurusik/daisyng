@@ -1,0 +1,10 @@
+#component-demo {
+  max-width: 100vw;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#component-demo > * {
+  scroll-snap-align: center;
+}
