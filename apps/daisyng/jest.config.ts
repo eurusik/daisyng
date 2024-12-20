@@ -1,8 +1,8 @@
 export default {
-  displayName: 'ngx-daisyui',
+  displayName: 'daisyng',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/ngx-daisyui',
+  coverageDirectory: '../../coverage/apps/daisyng',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

@@ -1,9 +1,9 @@
 {
-  "name": "ngx-daisyui",
+  "name": "daisyng",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/ngx-daisyui/src",
+  "sourceRoot": "apps/daisyng/src",
   "tags": [],
   "targets": {
     "build": {
@@ -12,13 +12,13 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/ngx-daisyui",
-        "index": "apps/ngx-daisyui/src/index.html",
-        "browser": "apps/ngx-daisyui/src/main.ts",
+        "outputPath": "dist/apps/daisyng",
+        "index": "apps/daisyng/src/index.html",
+        "browser": "apps/daisyng/src/main.ts",
         "polyfills": [
           "zone.js"
         ],
-        "tsConfig": "apps/ngx-daisyui/tsconfig.app.json",
+        "tsConfig": "apps/daisyng/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
@@ -33,17 +33,17 @@
           },
           {
             "glob": "**/*",
-            "input": "ng-doc/ngx-daisyui/assets",
+            "input": "ng-doc/daisyng/assets",
             "output": "assets/ng-doc"
           },
           {
             "glob": "**/*",
-            "input": "apps/ngx-daisyui/public"
+            "input": "apps/daisyng/public"
           }
         ],
         "styles": [
           "node_modules/@ng-doc/app/styles/global.css",
-          "apps/ngx-daisyui/src/styles.scss"
+          "apps/daisyng/src/styles.scss"
         ],
         "scripts": [],
         "allowedCommonJsDependencies": [
@@ -78,10 +78,10 @@
       "executor": "@ng-doc/builder:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "ngx-daisyui:build:production"
+          "buildTarget": "daisyng:build:production"
         },
         "development": {
-          "buildTarget": "ngx-daisyui:build:development"
+          "buildTarget": "daisyng:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "ngx-daisyui:build"
+        "buildTarget": "daisyng:build"
       }
     },
     "lint": {
@@ -101,14 +101,14 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "apps/ngx-daisyui/jest.config.ts"
+        "jestConfig": "apps/daisyng/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "ngx-daisyui:build",
-        "staticFilePath": "dist/apps/ngx-daisyui/browser",
+        "buildTarget": "daisyng:build",
+        "staticFilePath": "dist/apps/daisyng/browser",
         "spa": true
       }
     }

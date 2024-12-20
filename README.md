@@ -9,7 +9,7 @@
 </div>
 
 <div align="center">
-<h1>ngx-daisyUI</h1>
+<h1>daisyng</h1>
 <h3>Angular UI Component Library</h3>
 </div>
 

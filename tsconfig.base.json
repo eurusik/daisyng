@@ -15,14 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ng-doc/generated": ["./ng-doc/ngx-daisyui/index.ts"],
-      "@ng-doc/generated/*": ["./ng-doc/ngx-daisyui/*"],
-      "@ngx-daisyui/docs": ["docs/src/index.ts"],
-      "@ngx-daisyui/docs/landing/introduce": [
+      "@ng-doc/generated": ["./ng-doc/daisyng/index.ts"],
+      "@ng-doc/generated/*": ["./ng-doc/daisyng/*"],
+      "@daisyng/docs": ["docs/src/index.ts"],
+      "@daisyng/docs/landing/introduce": [
         "docs/src/lib/landing/introduce/index.ts"
       ],
-      "@ngx-daisyui/docs/shell": ["docs/src/lib/shell/index.ts"],
-      "@ngx-daisyui/kit/components/button": [
+      "@daisyng/docs/shell": ["docs/src/lib/shell/index.ts"],
+      "@daisyng/kit/components/button": [
         "kit/components/button/src/index.ts"
       ]
     }
