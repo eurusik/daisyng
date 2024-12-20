@@ -13,8 +13,7 @@ import { LogoComponent } from '../components/logo';
 
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'app-root',
+  selector: 'docs-shell',
   imports: [
     CommonModule,
     NgDocRootComponent,

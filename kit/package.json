@@ -1,5 +1,5 @@
 {
-  "name": "@daisyui/kit",
+  "name": "@ngx-daisyui/kit",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^19.0.0",

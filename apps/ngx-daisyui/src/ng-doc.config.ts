@@ -8,6 +8,7 @@ const config: NgDocConfiguration = {
     mainBranch: 'main',
     releaseBranch: 'release',
   },
+  tsConfig: 'apps/ngx-daisyui/tsconfig.app.json',
 };
 
 export default config;
