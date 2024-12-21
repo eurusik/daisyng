@@ -26,7 +26,7 @@ module.exports = [
         'error',
         {
           type: 'attribute',
-          prefix: 'dui',
+          prefix: 'dsy',
           style: 'camelCase',
         },
       ],
@@ -34,7 +34,7 @@ module.exports = [
         'error',
         {
           type: 'element',
-          prefix: 'dui',
+          prefix: 'dsy',
           style: 'kebab-case',
         },
       ],
