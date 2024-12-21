@@ -1,8 +1,8 @@
 import { NgDocApi } from '@ng-doc/core';
 
 const api: NgDocApi = {
-  title: 'API Reference',
-  keyword: 'api reference',
+  title: 'API',
+  keyword: 'api',
   scopes: [
     {
       name: 'components',

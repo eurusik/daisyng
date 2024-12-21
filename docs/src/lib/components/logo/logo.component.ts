@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -9,6 +9,4 @@ import { RouterLink } from '@angular/router';
   styleUrl: './logo.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LogoComponent {
-  text: InputSignal<string> = input.required();
-}
+export class LogoComponent {}

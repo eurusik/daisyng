@@ -1,9 +1,14 @@
 <div class="flex items-center gap-2">
-  <a
-    routerLink="/"
-    aria-current="page"
-    [attr.aria-label]="text()"
-    class="flex-0 btn btn-ghost gap-1 px-2 md:gap-2">
-    <span class="font-title text-base-content text-lg md:text-2xl">{{ text() }}</span>
+  <a routerLink="/" aria-current="page" aria-label="Landing page" class="flex-0 btn btn-ghost px-2">
+    <div class="font-title font-bold text-primary inline-flex text-lg transition-all duration-200 md:text-3xl">
+      <span class="lowercase text-primary">daisy</span>
+      <span class="uppercase text-base-content">NG</span>
+    </div>
+  </a>
+
+  <a routerLink="/docs/changelog" class="link link-hover font-mono text-xs text-opacity-50">
+    <div data-tip="Changelog" class="tooltip tooltip-bottom">
+      0.0.1-alpha
+    </div>
   </a>
 </div>
