@@ -7,34 +7,15 @@ module.exports = {
     join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
-  safelist: [
-    'mr-1',
-    'opacity-20',
-    'hover:opacity-60',
-    'text-base',
-    'font-bold',
-    'inline-block',
-    'align-middle',
-    'relative',
-    '-mt-1',
-    '[&_svg]:visible',
-  ],
+  daisyui: {
+    themes: ["light"],
+  },
   theme: {
     extend: {
       fontFamily: {
         'title': ['Montserrat', 'sans-serif'],
       }
     }
-  },
-  daisyui: {
-    styled: true,
-    themes: true,
-    base: true,
-    utils: true,
-    logs: true,
-    rtl: false,
-    prefix: "",
-    darkTheme: "dark",
   },
   plugins: [
     require("@tailwindcss/typography"),

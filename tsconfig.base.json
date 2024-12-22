@@ -16,7 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@daisyng/docs": ["docs/src/index.ts"],
-      "@daisyng/docs/landing/introduce": ["docs/src/lib/landing/introduce/index.ts"],
+      "@daisyng/docs/landing/introduce": [
+        "docs/src/lib/landing/introduce/index.ts"
+      ],
       "@daisyng/docs/shell": ["docs/src/lib/shell/index.ts"],
       "@daisyng/kit/directives/button": ["kit/directives/button/src/index.ts"],
       "@daisyng/sample/button": ["sample/src/lib/button/src/index.ts"],

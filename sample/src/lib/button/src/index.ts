@@ -1,1 +1,6 @@
 export * from './button.component'
+export * from './brand-colors.component'
+export * from './state-color.component'
+export * from './outline.component'
+export * from './size.component'
+export * from './responsive.component'
