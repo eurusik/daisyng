@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ButtonDirective } from '@daisyng/kit/directives/button';
 
 @Component({
-  selector: 'smp-responsive',
+  selector: 'smp-disabled-buttons',
   imports: [CommonModule, ButtonDirective],
-  templateUrl: './responsive.component.html',
-  styles: `:host { @apply flex items-center justify-center }`,
+  templateUrl: './disabled-button.component.html',
+  styles: `:host { @apply flex items-center justify-center flex-wrap gap-2 }`,
 })
-export class SampleResponsiveComponent {}
+export class SampleDisabledButtonComponent {}

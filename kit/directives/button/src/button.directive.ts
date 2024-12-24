@@ -1,4 +1,13 @@
-import { computed, Directive, ElementRef, inject, input, InputSignal, OnInit, Renderer2 } from '@angular/core';
+import {
+  computed,
+  Directive,
+  ElementRef,
+  inject,
+  input,
+  InputSignal,
+  OnInit,
+  Renderer2
+} from '@angular/core';
 import { SELECTOR_CLASS_PAIR } from './selector-class-pair.const';
 import { SelectorClassPair } from './selector-class-pair.interface';
 import { ButtonSize } from './size.type';
@@ -11,9 +20,10 @@ import { ButtonSize } from './size.type';
   host: {
     '[class.btn]': 'true',
     '[class.btn-outline]': 'outline()',
-    '[class.btn-xs]': 'size() === "xs"',
-    '[class.btn-sm]': 'size() === "sm"',
-    '[class.btn-lg]': 'size() === "lg"',
+    '[class.btn-wide]': 'wide()',
+    '[class.btn-xs]': 'size() === "xs" || responsive()',
+    '[class.btn-sm]': 'size() === "sm" && !responsive()',
+    '[class.btn-lg]': 'size() === "lg" && !responsive()',
     '[class]': 'getResponsiveClass()',
   },
 })
@@ -21,6 +31,7 @@ export class ButtonDirective implements OnInit {
   readonly outline: InputSignal<boolean> = input<boolean>(false);
   readonly size: InputSignal<ButtonSize> = input<ButtonSize>('md');
   readonly responsive: InputSignal<boolean> = input<boolean>(false);
+  readonly wide: InputSignal<boolean> = input<boolean>(false);
 
   private readonly elRef: ElementRef = inject(ElementRef);
   private readonly renderer: Renderer2 = inject(Renderer2)
@@ -28,19 +39,19 @@ export class ButtonDirective implements OnInit {
   readonly getResponsiveClass = computed(() => {
     if (!this.responsive()) return '';
 
-    const responsiveClassMap: Record<ButtonSize, string> = {
+    const responsiveClassMap = {
       'xs': 'btn-xs',
       'sm': 'btn-sm',
       'md': 'btn-md',
       'lg': 'btn-lg'
     };
 
-    const responsiveClasses: string[] = [];
+    const responsiveClasses: string[] = [''];
 
     const sizes: ButtonSize[] = ['xs', 'sm', 'md', 'lg'];
 
     sizes.forEach(size => {
-      if (this.size() <= size) {
+      if (this.size() <= size && size !== 'xs') {
         responsiveClasses.push(`${size}:${responsiveClassMap[size]}`);
       }
     });

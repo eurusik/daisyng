@@ -31,3 +31,11 @@ import { ButtonDirective } from '@daisyng/kit/directives/button';
 ### Responsive button
 
 {{ NgDocActions.demo("SampleResponsiveComponent") }}
+
+### Wide button
+
+{{ NgDocActions.demo("SampleWideButtonComponent") }}
+
+### Disabled button
+
+{{ NgDocActions.demo("SampleDisabledButtonComponent") }}
