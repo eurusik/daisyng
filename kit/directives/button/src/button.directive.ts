@@ -1,7 +1,7 @@
 import {
   computed,
   Directive,
-  ElementRef,
+  ElementRef, HostBinding,
   inject,
   input,
   InputSignal,
@@ -10,7 +10,8 @@ import {
 } from '@angular/core';
 import { SELECTOR_CLASS_PAIR } from './selector-class-pair.const';
 import { SelectorClassPair } from './selector-class-pair.interface';
-import { ButtonSize } from './size.type';
+import { ButtonSize } from './button-size.type';
+import { ButtonShape } from './button-shape.type';
 
 @Directive({
   selector:
@@ -24,7 +25,6 @@ import { ButtonSize } from './size.type';
     '[class.btn-xs]': 'size() === "xs" || responsive()',
     '[class.btn-sm]': 'size() === "sm" && !responsive()',
     '[class.btn-lg]': 'size() === "lg" && !responsive()',
-    '[class]': 'getResponsiveClass()',
   },
 })
 export class ButtonDirective implements OnInit {
@@ -32,9 +32,15 @@ export class ButtonDirective implements OnInit {
   readonly size: InputSignal<ButtonSize> = input<ButtonSize>('md');
   readonly responsive: InputSignal<boolean> = input<boolean>(false);
   readonly wide: InputSignal<boolean> = input<boolean>(false);
+  readonly shape: InputSignal<ButtonShape | ''> = input<ButtonShape | ''>('');
 
   private readonly elRef: ElementRef = inject(ElementRef);
   private readonly renderer: Renderer2 = inject(Renderer2)
+
+  readonly getShapeClass = computed(() => {
+    const shape = this.shape();
+    return shape ? (shape === 'circle' ? 'btn-circle' : 'btn-square') : '';
+  });
 
   readonly getResponsiveClass = computed(() => {
     if (!this.responsive()) return '';
@@ -58,6 +64,11 @@ export class ButtonDirective implements OnInit {
 
     return responsiveClasses.join(' ');
   });
+
+  @HostBinding('class')
+  get buttonClasses(): string {
+    return `${this.getResponsiveClass()} ${this.getShapeClass()}`;
+  }
 
   /**
    * @internal

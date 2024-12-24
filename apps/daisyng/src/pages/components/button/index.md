@@ -39,3 +39,7 @@ import { ButtonDirective } from '@daisyng/kit/directives/button';
 ### Disabled button
 
 {{ NgDocActions.demo("SampleDisabledButtonComponent") }}
+
+### Shape
+
+{{ NgDocActions.demo("SampleShapeComponent") }}

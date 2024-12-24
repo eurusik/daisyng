@@ -1,0 +1,27 @@
+<ng-template #svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M6 18L18 6M6 6l12 12" />
+  </svg>
+</ng-template>
+
+<button dsyBtn shape="square">
+  <ng-container *ngTemplateOutlet="svg"></ng-container>
+</button>
+<button dsyBtn shape="square" [outline]="true">
+  <ng-container *ngTemplateOutlet="svg"></ng-container>
+</button>
+<button dsyBtn shape="circle">
+  <ng-container *ngTemplateOutlet="svg"></ng-container>
+</button>
+<button dsyBtn shape="circle" [outline]="true">
+  <ng-container *ngTemplateOutlet="svg"></ng-container>
+</button>
