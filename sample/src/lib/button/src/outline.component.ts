@@ -6,6 +6,6 @@ import { ButtonDirective } from '@daisyng/kit/directives/button';
   selector: 'smp-outline',
   imports: [CommonModule, ButtonDirective],
   templateUrl: './outline.component.html',
-  styles: ``,
+  styles: `:host { @apply flex items-center justify-center flex-wrap gap-2 }`,
 })
 export class SampleOutlineComponent {}

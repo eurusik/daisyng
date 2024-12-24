@@ -6,6 +6,6 @@ import { ButtonDirective } from '@daisyng/kit/directives/button';
   selector: 'smp-disabled-buttons',
   imports: [CommonModule, ButtonDirective],
   templateUrl: './disabled-button.component.html',
-  styles: `:host { @apply flex items-center justify-center flex-wrap gap-2 }`,
+  styles: `:host { @apply flex items-center justify-center }`,
 })
 export class SampleDisabledButtonComponent {}
