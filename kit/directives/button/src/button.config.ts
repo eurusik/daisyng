@@ -8,21 +8,24 @@ export const buttonConfig = cva(
   {
     variants: {
       responsive: {
-        default: '',
         xs: 'btn-xs',
         sm: 'btn-xs sm:btn-sm',
         md: 'btn-xs sm:btn-sm md:btn-md',
         lg: 'btn-xs sm:btn-sm md:btn-md lg:btn-lg',
       },
+      width: {
+        full: 'btn-block',
+        wide: 'btn-wide',
+      },
       shape: {
-        default: '',
         square: 'btn-square',
         circle: 'btn-circle',
       },
     },
     defaultVariants: {
-      shape: 'default',
-      responsive: 'default'
+      shape: null,
+      responsive: null,
+      width: null,
     },
   },
 );
@@ -41,12 +44,14 @@ export type ButtonVariants = VariantProps<typeof buttonConfig>;
 export interface ButtonConfig {
   shape: ButtonVariants['shape'];
   responsive: ButtonVariants['responsive'];
+  width: ButtonVariants['width'];
 }
 
 /**
  * Default configuration for the button.
  */
 export const defaultConfig: ButtonConfig = {
-  shape: 'default',
-  responsive: 'default'
+  shape: null,
+  responsive: null,
+  width: null
 };

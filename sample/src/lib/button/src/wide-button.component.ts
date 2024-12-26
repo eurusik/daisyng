@@ -6,6 +6,6 @@ import { ButtonDirective } from '@daisyng/kit/directives/button';
   selector: 'smp-wide-button',
   imports: [CommonModule, ButtonDirective],
   templateUrl: './wide-button.component.html',
-  styles: `:host { @apply flex items-center justify-center }`,
+  styles: `:host { @apply flex items-center justify-center flex-col space-y-2 }`,
 })
 export class SampleWideButtonComponent {}
