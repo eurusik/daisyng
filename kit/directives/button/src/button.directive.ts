@@ -1,7 +1,7 @@
 import {
   computed,
   Directive,
-  ElementRef, HostBinding,
+  ElementRef,
   inject,
   input,
   InputSignal,
@@ -12,6 +12,9 @@ import { SELECTOR_CLASS_PAIR } from './selector-class-pair.const';
 import { SelectorClassPair } from './selector-class-pair.interface';
 import { ButtonSize } from './button-size.type';
 import { ButtonShape } from './button-shape.type';
+import {injectButtonConfig } from './button.token';
+import { buttonConfig } from './button.config';
+import { classMerge } from '@daisyng/kit/core/tools';
 
 @Directive({
   selector:
@@ -25,50 +28,24 @@ import { ButtonShape } from './button-shape.type';
     '[class.btn-xs]': 'size() === "xs" || responsive()',
     '[class.btn-sm]': 'size() === "sm" && !responsive()',
     '[class.btn-lg]': 'size() === "lg" && !responsive()',
+    '[class]': 'classes()',
   },
 })
 export class ButtonDirective implements OnInit {
+  private readonly config = injectButtonConfig();
+
   readonly outline: InputSignal<boolean> = input<boolean>(false);
   readonly size: InputSignal<ButtonSize> = input<ButtonSize>('md');
   readonly responsive: InputSignal<boolean> = input<boolean>(false);
   readonly wide: InputSignal<boolean> = input<boolean>(false);
-  readonly shape: InputSignal<ButtonShape | ''> = input<ButtonShape | ''>('');
+  readonly shape: InputSignal<ButtonShape> = input<ButtonShape>(this.config.shape);
 
   private readonly elRef: ElementRef = inject(ElementRef);
   private readonly renderer: Renderer2 = inject(Renderer2)
 
-  readonly getShapeClass = computed(() => {
-    const shape = this.shape();
-    return shape ? (shape === 'circle' ? 'btn-circle' : 'btn-square') : '';
-  });
-
-  readonly getResponsiveClass = computed(() => {
-    if (!this.responsive()) return '';
-
-    const responsiveClassMap = {
-      'xs': 'btn-xs',
-      'sm': 'btn-sm',
-      'md': 'btn-md',
-      'lg': 'btn-lg'
-    };
-
-    const responsiveClasses: string[] = [''];
-
-    const sizes: ButtonSize[] = ['xs', 'sm', 'md', 'lg'];
-
-    sizes.forEach(size => {
-      if (this.size() <= size && size !== 'xs') {
-        responsiveClasses.push(`${size}:${responsiveClassMap[size]}`);
-      }
-    });
-
-    return responsiveClasses.join(' ');
-  });
-
-  @HostBinding('class')
-  get buttonClasses(): string {
-    return `${this.getResponsiveClass()} ${this.getShapeClass()}`;
-  }
+  protected readonly classes = computed(() =>
+    classMerge(buttonConfig({ shape: this.shape(), responsive: this.responsive() ? this.size() : 'default' }))
+  );
 
   /**
    * @internal
