@@ -1,6 +1,6 @@
 import { cva, VariantProps } from 'class-variance-authority';
 
-export const avatarImageConfig = cva('avatar', {
+export const avatarImageConfig = cva('', {
   variants: {
     rounded: {
       xs: 'rounded-xl',

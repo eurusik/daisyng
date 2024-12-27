@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AvatarComponent } from '@daisyng/kit/components/avatar';
-import { AvatarDirective } from '@daisyng/kit/directives/avatar';
+import { AvatarImageDirective } from '@daisyng/kit/directives/avatar';
 
 @Component({
   selector: 'smp-avatar',
-  imports: [CommonModule, AvatarComponent, AvatarDirective],
+  imports: [CommonModule, AvatarComponent, AvatarImageDirective],
   templateUrl: './avatar.component.html',
   styles: ``,
 })

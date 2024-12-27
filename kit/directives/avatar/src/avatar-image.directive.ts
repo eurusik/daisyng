@@ -11,7 +11,7 @@ import { AvatarImageRounded } from './avatar-image.shape';
     '[class]': 'classes()',
   },
 })
-export class AvatarDirective {
+export class AvatarImageDirective {
   readonly ring: InputSignal<boolean> = input<boolean>(false);
 
   readonly rounded: InputSignal<AvatarImageRounded> = input<AvatarImageRounded>(null);

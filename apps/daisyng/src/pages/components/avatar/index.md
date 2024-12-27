@@ -23,3 +23,7 @@ import { AvatarComponent } from '@daisyng/kit/components/avatar';
 ### Avatar with ring
 
 {{ NgDocActions.demo("SampleAvatarWithRingComponent") }}
+
+### Avatar group
+
+{{ NgDocActions.demo("SampleAvatarGroupComponent") }}

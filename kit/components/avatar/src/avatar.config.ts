@@ -7,10 +7,14 @@ export const avatarConfig = cva('avatar', {
       small: 'w-16',
       medium: 'w-20',
       large: 'w-32',
+    },
+    avatarGroup: {
+      group: 'avatar-group -space-x-6 rtl:space-x-reverse'
     }
   },
   defaultVariants: {
     size: 'medium',
+    avatarGroup: null
   },
 });
 
