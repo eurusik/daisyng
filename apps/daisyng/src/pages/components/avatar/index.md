@@ -19,3 +19,7 @@ import { AvatarComponent } from '@daisyng/kit/components/avatar';
 ### Avatar rounded
 
 {{ NgDocActions.demo("SampleAvatarRoundedComponent") }}
+
+### Avatar with ring
+
+{{ NgDocActions.demo("SampleAvatarWithRingComponent") }}

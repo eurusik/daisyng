@@ -12,9 +12,12 @@ import { AvatarImageRounded } from './avatar-image.shape';
   },
 })
 export class AvatarDirective {
+  readonly ring: InputSignal<boolean> = input<boolean>(false);
+
   readonly rounded: InputSignal<AvatarImageRounded> = input<AvatarImageRounded>(null);
 
   readonly classes = computed(() => classMerge(avatarImageConfig({
-    rounded: this.rounded()
+    rounded: this.rounded(),
+    ring: this.ring() ? 'primary' : null,
   })));
 }

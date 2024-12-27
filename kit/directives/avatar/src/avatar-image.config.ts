@@ -5,10 +5,14 @@ export const avatarImageConfig = cva('avatar', {
     rounded: {
       xs: 'rounded-xl',
       full: 'rounded-full',
+    },
+    ring: {
+      primary: 'ring-primary ring-offset-base-100 rounded-full ring ring-offset-2'
     }
   },
   defaultVariants: {
     rounded: null,
+    ring: null
   },
 });
 

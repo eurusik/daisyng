@@ -3,7 +3,8 @@ import ComponentsCategory from '../ng-doc.category';
 import {
   SampleAvatarComponent,
   SampleAvatarRoundedComponent,
-  SampleAvatarSizeComponent
+  SampleAvatarSizeComponent,
+  SampleAvatarWithRingComponent,
 } from '@daisyng/sample/avatar';
 
 const AvatarPage: NgDocPage = {
@@ -12,7 +13,8 @@ const AvatarPage: NgDocPage = {
   demos: {
     SampleAvatarComponent,
     SampleAvatarSizeComponent,
-    SampleAvatarRoundedComponent
+    SampleAvatarRoundedComponent,
+    SampleAvatarWithRingComponent,
   },
   category: ComponentsCategory,
 };
