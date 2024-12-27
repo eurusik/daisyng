@@ -1,5 +1,5 @@
 import { inject, InjectionToken } from '@angular/core';
-import { ButtonConfig, defaultConfig } from './button.config';
+import { ButtonConfig, defaultButtonConfig } from './button.config';
 
 /**
  * Injection token for the button configuration.
@@ -14,5 +14,5 @@ export const ButtonConfigToken = new InjectionToken<ButtonConfig>('ButtonConfig'
  * @returns The injected `ButtonConfig` or the `defaultConfig` if not provided.
  */
 export function injectButtonConfig(): ButtonConfig {
-  return inject(ButtonConfigToken, { optional: true }) ?? defaultConfig;
+  return inject(ButtonConfigToken, { optional: true }) ?? defaultButtonConfig;
 }

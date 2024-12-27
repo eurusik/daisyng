@@ -50,7 +50,7 @@ export interface ButtonConfig {
 /**
  * Default configuration for the button.
  */
-export const defaultConfig: ButtonConfig = {
+export const defaultButtonConfig: ButtonConfig = {
   shape: null,
   responsive: null,
   width: null

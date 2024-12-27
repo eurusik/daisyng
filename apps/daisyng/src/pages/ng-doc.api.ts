@@ -5,14 +5,14 @@ const api: NgDocApi = {
   keyword: 'api',
   scopes: [
     {
-      name: '@daisyng/kit/components',
-      route: 'components',
-      include: 'kit/components/**/*.ts',
+      name: '@directives/button',
+      route: 'directives',
+      include: 'kit/directives/button/**/*.ts',
     },
     {
-      name: '@daisyng/kit/directives',
+      name: '@directives/alert',
       route: 'directives',
-      include: 'kit/directives/**/*.ts',
+      include: 'kit/directives/alert/**/*.ts',
     },
   ],
 };

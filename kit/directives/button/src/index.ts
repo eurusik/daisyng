@@ -1,1 +1,6 @@
 export * from './button.directive'
+export * from './button.token'
+export * from './button.config'
+export * from './button-shape.type'
+export * from './button-size.type'
+export * from './button-width.type'
