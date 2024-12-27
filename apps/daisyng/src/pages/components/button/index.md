@@ -43,3 +43,11 @@ import { ButtonDirective } from '@daisyng/kit/directives/button';
 ### Shape
 
 {{ NgDocActions.demo("SampleShapeComponent") }}
+
+### Loading button
+
+{{ NgDocActions.demo("SampleLoadingComponent") }}
+
+### Button without click animation
+
+{{ NgDocActions.demo("SampleNoAnimationComponent") }}
