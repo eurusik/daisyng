@@ -20,10 +20,13 @@
         "docs/src/lib/landing/introduce/index.ts"
       ],
       "@daisyng/docs/shell": ["docs/src/lib/shell/index.ts"],
+      "@daisyng/kit/components/avatar": ["kit/components/avatar/src/index.ts"],
       "@daisyng/kit/core/tools": ["kit/core/tools/src/index.ts"],
       "@daisyng/kit/directives/alert": ["kit/directives/alert/src/index.ts"],
+      "@daisyng/kit/directives/avatar": ["kit/directives/avatar/src/index.ts"],
       "@daisyng/kit/directives/button": ["kit/directives/button/src/index.ts"],
       "@daisyng/sample/alert": ["sample/src/lib/alert/src/index.ts"],
+      "@daisyng/sample/avatar": ["sample/src/lib/avatar/src/index.ts"],
       "@daisyng/sample/button": ["sample/src/lib/button/src/index.ts"],
       "@ng-doc/generated": ["./ng-doc/daisyng/index.ts"],
       "@ng-doc/generated/*": ["./ng-doc/daisyng/*"]
