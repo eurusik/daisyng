@@ -31,3 +31,7 @@ import { AvatarComponent } from '@daisyng/kit/components/avatar';
 ### Avatar with presence indicator
 
 {{ NgDocActions.demo("SampleAvatarIndicatorComponent") }}
+
+### Avatar placeholder
+
+{{ NgDocActions.demo("SampleAvatarPlaceholderComponent") }}

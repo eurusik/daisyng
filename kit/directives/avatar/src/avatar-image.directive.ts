@@ -1,7 +1,7 @@
 import { computed, Directive, input, InputSignal } from '@angular/core';
 import { classMerge } from '@daisyng/kit/core/tools';
 import { avatarImageConfig } from './avatar-image.config';
-import { AvatarImageRing, AvatarImageRounded } from './avatar-image.shape';
+import { AvatarImageRing, AvatarImageRounded } from './avatar-image-placeholder.type';
 
 @Directive({
   selector: 'img[dsyAvatarImage]',

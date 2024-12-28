@@ -4,9 +4,9 @@ export const avatarConfig = cva('avatar', {
   variants: {
     size: {
       tiny: 'w-8',
-      small: 'w-16',
-      medium: 'w-20',
-      large: 'w-32',
+      small: 'w-12',
+      medium: 'w-16',
+      large: 'w-24',
     },
     avatarGroup: {
       group: 'avatar-group -space-x-6 rtl:space-x-reverse'
@@ -14,12 +14,16 @@ export const avatarConfig = cva('avatar', {
     indicator: {
       online: 'online',
       offline: 'offline'
+    },
+    avatarPlaceholder: {
+      placeholder: 'placeholder'
     }
   },
   defaultVariants: {
     size: 'medium',
     avatarGroup: null,
-    indicator: null
+    indicator: null,
+    avatarPlaceholder: null
   },
 });
 

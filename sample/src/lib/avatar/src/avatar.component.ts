@@ -7,6 +7,6 @@ import { AvatarImageDirective } from '@daisyng/kit/directives/avatar';
   selector: 'smp-avatar',
   imports: [CommonModule, AvatarComponent, AvatarImageDirective],
   templateUrl: './avatar.component.html',
-  styles: ``,
+  styles: `:host { @apply flex items-center justify-center }`,
 })
 export class SampleAvatarComponent {}

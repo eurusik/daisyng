@@ -15,11 +15,17 @@ import { AvatarIndicator } from './avatar-indicator.type';
   },
 })
 export class AvatarComponent {
+  readonly placeholder: InputSignal<boolean> = input<boolean>(false);
+
   readonly size: InputSignal<AvatarSize> = input<AvatarSize>('medium');
 
   readonly indicator: InputSignal<AvatarIndicator> = input<AvatarIndicator>(null);
 
   readonly classes = computed(() =>
-    classMerge(avatarConfig({ size: this.size(), indicator: this.indicator() })),
+    classMerge(avatarConfig({
+      size: this.size(),
+      indicator: this.indicator(),
+      avatarPlaceholder: this.placeholder() ? 'placeholder' : null
+    })),
   );
 }

@@ -6,7 +6,7 @@ import {
   SampleAvatarSizeComponent,
   SampleAvatarWithRingComponent,
   SampleAvatarGroupComponent,
-  SampleAvatarIndicatorComponent
+  SampleAvatarIndicatorComponent, SampleAvatarPlaceholderComponent
 } from '@daisyng/sample/avatar';
 
 const AvatarPage: NgDocPage = {
@@ -18,7 +18,8 @@ const AvatarPage: NgDocPage = {
     SampleAvatarRoundedComponent,
     SampleAvatarWithRingComponent,
     SampleAvatarGroupComponent,
-    SampleAvatarIndicatorComponent
+    SampleAvatarIndicatorComponent,
+    SampleAvatarPlaceholderComponent
   },
   category: ComponentsCategory,
 };
