@@ -1,1 +1,10 @@
-<ng-content select="[dsyAvatarImage]" />
+<div
+  dsyAvatarSize [size]="size()"
+  dsyAvatarRing [ring]="ring()"
+  dsyAvatarRounded [rounded]="rounded()"
+  dsyAvatarPlaceholder
+  [phRounded]="phRounded()"
+  [phType]="phType()"
+>
+  <ng-content/>
+</div>

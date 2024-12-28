@@ -28,6 +28,14 @@ import { AvatarComponent } from '@daisyng/kit/components/avatar';
 
 {{ NgDocActions.demo("SampleAvatarGroupComponent") }}
 
+### Avatar group with counter
+
+{{ NgDocActions.demo("SampleAvatarGroupWithCounterComponent") }}
+
 ### Avatar with presence indicator
 
 {{ NgDocActions.demo("SampleAvatarIndicatorComponent") }}
+
+### Avatar placeholder
+
+{{ NgDocActions.demo("SampleAvatarPlaceholderComponent") }}

@@ -1,18 +1,7 @@
 import { computed, Directive } from '@angular/core';
-import { cva, VariantProps } from 'class-variance-authority';
+import { VariantProps } from 'class-variance-authority';
 import { classMerge } from '@daisyng/kit/core/tools';
-
-/**
- * Configuration for alert description styles.
- */
-export const alertDescriptionConfig = cva('text-sm [&_p]:leading-relaxed', {
-  variants: {},
-});
-
-/**
- * Type definition for the `alertDescriptionConfig` variants.
- */
-export type AlertDescriptionConfig = VariantProps<typeof alertDescriptionConfig>;
+import { alertDescriptionConfig } from './alert-description.config';
 
 /**
  * A directive that applies predefined styles to elements with the `[dsyAlertDesc]` attribute.
@@ -27,7 +16,7 @@ export type AlertDescriptionConfig = VariantProps<typeof alertDescriptionConfig>
   selector: '[dsyAlertDesc]',
   host: {
     '[class]': 'classes()',
-  }
+  },
 })
 export class AlertDescriptionDirective {
   /**

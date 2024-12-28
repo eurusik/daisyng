@@ -1,18 +1,6 @@
 import { computed, Directive } from '@angular/core';
-import { cva, VariantProps } from 'class-variance-authority';
 import { classMerge } from '@daisyng/kit/core/tools';
-
-/**
- * Configuration for alert title styles.
- */
-export const alertTitleConfig = cva('mb-1 font-medium leading-none tracking-tight', {
-  variants: {},
-});
-
-/**
- * Type definition for the `alertTitleConfig` variants.
- */
-export type AlertTitleConfig = VariantProps<typeof alertTitleConfig>;
+import { alertTitleConfig } from './alert-title.config';
 
 /**
  * Directive to apply styles to elements with the `[dsyAlertTitle]` attribute.

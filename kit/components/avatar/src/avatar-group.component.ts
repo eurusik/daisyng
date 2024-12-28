@@ -13,6 +13,6 @@ import { avatarConfig } from './avatar.config';
 })
 export class AvatarGroupComponent {
   readonly classes = computed(() =>
-    classMerge(avatarConfig({ avatarGroup: 'group' })),
+    classMerge(avatarConfig({ avatarGroup: 'group'})),
   );
 }
