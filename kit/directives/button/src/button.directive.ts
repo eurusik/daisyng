@@ -32,7 +32,6 @@ import { ButtonWidth } from './button-width.type';
   selector:
     'button[dsyBtn], button[dsyBtnPrimary], button[dsyBtnSecondary], button[dsyBtnNeutral], button[dsyBtnAccent], button[dsyBtnInfo], button[dsyBtnSuccess], button[dsyBtnWarning], button[dsyBtnError], button[dsyBtnGhost], button[dsyBtnLink]',
   exportAs: 'dsyButton',
-  standalone: true,
   host: {
     '[class.btn]': 'true',
     '[class.btn-outline]': 'outline()',

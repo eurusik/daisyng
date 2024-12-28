@@ -4,9 +4,9 @@ import { AvatarComponent } from '@daisyng/kit/components/avatar';
 import { AvatarImageDirective } from '@daisyng/kit/directives/avatar';
 
 @Component({
-  selector: 'smp-avatar-with-ring',
+  selector: 'smp-avatar-indicator',
   imports: [CommonModule, AvatarComponent, AvatarImageDirective],
-  templateUrl: './avatar-with-ring.component.html',
-  styles: `:host { @apply flex items-center justify-center flex-wrap gap-5 mt-2 mb-2 }`,
+  templateUrl: './avatar-indicator.component.html',
+  styles: `:host { @apply flex items-center justify-center flex-wrap gap-2 }`,
 })
-export class SampleAvatarWithRingComponent {}
+export class SampleAvatarIndicatorComponent {}

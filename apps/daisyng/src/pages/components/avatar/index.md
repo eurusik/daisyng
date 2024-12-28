@@ -27,3 +27,7 @@ import { AvatarComponent } from '@daisyng/kit/components/avatar';
 ### Avatar group
 
 {{ NgDocActions.demo("SampleAvatarGroupComponent") }}
+
+### Avatar with presence indicator
+
+{{ NgDocActions.demo("SampleAvatarIndicatorComponent") }}

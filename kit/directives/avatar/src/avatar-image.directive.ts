@@ -1,10 +1,9 @@
 import { computed, Directive, input, InputSignal } from '@angular/core';
 import { classMerge } from '@daisyng/kit/core/tools';
 import { avatarImageConfig } from './avatar-image.config';
-import { AvatarImageRounded } from './avatar-image.shape';
+import { AvatarImageRing, AvatarImageRounded } from './avatar-image.shape';
 
 @Directive({
-  standalone: true,
   selector: 'img[dsyAvatarImage]',
   exportAs: 'avatarImage',
   host: {
@@ -12,12 +11,12 @@ import { AvatarImageRounded } from './avatar-image.shape';
   },
 })
 export class AvatarImageDirective {
-  readonly ring: InputSignal<boolean> = input<boolean>(false);
+  readonly ring: InputSignal<AvatarImageRing> = input<AvatarImageRing>(null);
 
   readonly rounded: InputSignal<AvatarImageRounded> = input<AvatarImageRounded>(null);
 
   readonly classes = computed(() => classMerge(avatarImageConfig({
     rounded: this.rounded(),
-    ring: this.ring() ? 'primary' : null,
+    ring: this.ring(),
   })));
 }

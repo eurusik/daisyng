@@ -10,11 +10,16 @@ export const avatarConfig = cva('avatar', {
     },
     avatarGroup: {
       group: 'avatar-group -space-x-6 rtl:space-x-reverse'
+    },
+    indicator: {
+      online: 'online',
+      offline: 'offline'
     }
   },
   defaultVariants: {
     size: 'medium',
-    avatarGroup: null
+    avatarGroup: null,
+    indicator: null
   },
 });
 
