@@ -24,6 +24,11 @@ const api: NgDocApi = {
       route: 'directives',
       include: 'kit/directives/avatar/**/*.directive.ts',
     },
+    {
+      name: '@directives/badge',
+      route: 'directives',
+      include: 'kit/directives/badge/**/*.directive.ts',
+    },
   ],
 };
 

@@ -24,9 +24,11 @@
       "@daisyng/kit/core/tools": ["kit/core/tools/src/index.ts"],
       "@daisyng/kit/directives/alert": ["kit/directives/alert/src/index.ts"],
       "@daisyng/kit/directives/avatar": ["kit/directives/avatar/src/index.ts"],
+      "@daisyng/kit/directives/badge": ["kit/directives/badge/src/index.ts"],
       "@daisyng/kit/directives/button": ["kit/directives/button/src/index.ts"],
       "@daisyng/sample/alert": ["sample/src/lib/alert/src/index.ts"],
       "@daisyng/sample/avatar": ["sample/src/lib/avatar/src/index.ts"],
+      "@daisyng/sample/badge": ["sample/src/lib/badge/src/index.ts"],
       "@daisyng/sample/button": ["sample/src/lib/button/src/index.ts"],
       "@ng-doc/generated": ["./ng-doc/daisyng/index.ts"],
       "@ng-doc/generated/*": ["./ng-doc/daisyng/*"]
