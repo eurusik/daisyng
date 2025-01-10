@@ -6,7 +6,7 @@ import {
   input,
   InputSignal,
   OnInit,
-  Renderer2,
+  Renderer2, Signal
 } from '@angular/core';
 import { classMerge } from '@daisyng/kit/core/tools';
 import { badgeConfig } from './badge.config';
@@ -35,12 +35,6 @@ export class BadgeDirective implements OnInit {
   readonly size: InputSignal<BadgeSize> = input<BadgeSize>('md');
 
   /**
-   * Input signal to determine if the badge should have an outline.
-   * Accepts a boolean value, where `true` applies the outline style.
-   */
-  readonly outline: InputSignal<boolean> = input<boolean>(false);
-
-  /**
    * @internal
    * @private
    */
@@ -51,6 +45,11 @@ export class BadgeDirective implements OnInit {
    * @private
    */
   private readonly renderer: Renderer2 = inject(Renderer2);
+
+  /**
+   * Controls whether the badge should have an outline style.
+   */
+  readonly outline: Signal<boolean> = computed(() => this.elRef.nativeElement.hasAttribute('data-outline'));
 
   /**
    * Computes the classes to be applied to the badge based on the current size.

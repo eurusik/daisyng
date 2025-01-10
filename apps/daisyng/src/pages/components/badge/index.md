@@ -17,9 +17,17 @@ import { BadgeDirective } from '@daisyng/kit/directives/badge';
 
 ### Outline badge
 
+To enable the `outline` style into your badge, simply add the `data-outline` attribute as shown below:
+
+```html
+<div dsyBadge data-outline>default</div>
+```
+
 {{ NgDocActions.demo("SampleBadgeOutlineComponent") }}
 
 ### Badge sizes
+
+- Sizes: `xs`, `sm`, `md`, `lg`.
 
 {{ NgDocActions.demo("SampleBadgeSizesComponent") }}
 

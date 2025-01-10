@@ -51,7 +51,7 @@ export class AvatarComponent {
   readonly rounded: InputSignal<AvatarRounded> = input<AvatarRounded>('xs');
 
   /** Sets the size of the avatar. */
-  readonly size: InputSignal<AvatarSize> = input<AvatarSize>('medium');
+  readonly size: InputSignal<AvatarSize> = input<AvatarSize>('md');
 
   /** Applies a ring effect around the avatar. */
   readonly ring: InputSignal<AvatarRing> = input<AvatarRing>(null);

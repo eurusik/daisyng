@@ -4,7 +4,7 @@ import { cva, VariantProps } from 'class-variance-authority';
  * Configuration for the button styles.
  */
 export const buttonConfig = cva(
-  '',
+  'btn',
   {
     variants: {
       responsive: {

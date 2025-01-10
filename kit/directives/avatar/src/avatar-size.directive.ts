@@ -11,7 +11,7 @@ import { AvatarSize } from './avatar-size.type';
   },
 })
 export class AvatarSizeDirective {
-  readonly size: InputSignal<AvatarSize> = input<AvatarSize>('medium')
+  readonly size: InputSignal<AvatarSize> = input<AvatarSize>('md')
 
   readonly classes = computed(() => classMerge(avatarSizeConfig({
     size: this.size(),

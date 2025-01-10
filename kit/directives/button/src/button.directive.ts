@@ -7,7 +7,7 @@ import {
   input,
   InputSignal,
   OnInit,
-  Renderer2,
+  Renderer2, Signal
 } from '@angular/core';
 import { SELECTOR_CLASS_PAIR } from './selector-class-pair.const';
 import { SelectorClassPair } from './selector-class-pair.interface';
@@ -33,12 +33,11 @@ import { ButtonWidth } from './button-width.type';
     'button[dsyBtn], button[dsyBtnPrimary], button[dsyBtnSecondary], button[dsyBtnNeutral], button[dsyBtnAccent], button[dsyBtnInfo], button[dsyBtnSuccess], button[dsyBtnWarning], button[dsyBtnError], button[dsyBtnGhost], button[dsyBtnLink]',
   exportAs: 'dsyButton',
   host: {
-    '[class.btn]': 'true',
     '[class.btn-outline]': 'outline()',
     '[class.btn-xs]': 'size() === "xs" || responsive()',
     '[class.btn-sm]': 'size() === "sm" && !responsive()',
     '[class.btn-lg]': 'size() === "lg" && !responsive()',
-    '[class.no-animation]': 'noAnimation()',
+    '[class.no-animation]': 'skipAnimation()',
     '[class]': 'classes()',
   },
 })
@@ -46,22 +45,10 @@ export class ButtonDirective implements OnInit {
   private readonly config = injectButtonConfig();
 
   /**
-   * Controls whether the button should have an outline style.
-   * Default: `false`.
-   */
-  readonly outline: InputSignal<boolean> = input<boolean>(false);
-
-  /**
    * Specifies the size of the button.
    * Default: `'md'` (medium size).
    */
   readonly size: InputSignal<ButtonSize> = input<ButtonSize>('md');
-
-  /**
-   * Determines if the button should adapt its size responsively.
-   * Default: `false`.
-   */
-  readonly responsive: InputSignal<boolean> = input<boolean>(false);
 
   /**
    * Configures the width of the button, such as wide or full-width.
@@ -80,12 +67,6 @@ export class ButtonDirective implements OnInit {
   );
 
   /**
-   * Determines whether animations should be disabled for the button.
-   * Default: `false`.
-   */
-  readonly noAnimation: InputSignal<boolean> = input<boolean>(false);
-
-  /**
    * Indicates whether the button is in a loading state.
    * When `true`, a loading spinner is displayed.
    * Default: `false`.
@@ -96,6 +77,21 @@ export class ButtonDirective implements OnInit {
   private readonly renderer: Renderer2 = inject(Renderer2);
 
   private spinner: HTMLElement | null = null;
+
+  /**
+   * Determines if the button should adapt its size responsively.
+   */
+  readonly responsive: Signal<boolean> = computed(() => this.elRef.nativeElement.hasAttribute('data-responsive'));
+
+  /**
+   * Determines whether animations should be disabled for the button.
+   */
+  readonly skipAnimation: Signal<boolean> = computed(() => this.elRef.nativeElement.hasAttribute('data-skip-animation'));
+
+  /**
+   * Controls whether the button should have an outline style.
+   */
+  readonly outline: Signal<boolean> = computed(() => this.elRef.nativeElement.hasAttribute('data-outline'));
 
   /**
    * @internal

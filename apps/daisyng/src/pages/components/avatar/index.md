@@ -20,7 +20,7 @@ import { AvatarComponent } from '@daisyng/kit/components/avatar';
 </dsy-avatar>
 ```
 
-- Sizes: `tiny`, `small`, `medium`, `large`.
+- Sizes: `xs`, `sm`, `md`, `lg`.
 
 {{ NgDocActions.demo("SampleAvatarSizeComponent") }}
 

@@ -22,13 +22,31 @@ import { ButtonDirective } from '@daisyng/kit/directives/button';
 
 ### Outline buttons
 
+To enable the `outline` style into your badge, simply add the `data-outline` attribute as shown below:
+
+```html
+<button dsyBtn data-outline>Button</button>
+```
+
 {{ NgDocActions.demo("SampleOutlineComponent") }}
 
 ### Button sizes
 
+```html
+<button dsyBtn size="lg">Large</button>
+```
+
+- Sizes: `xs`, `sm`, `md`, `lg`.
+
 {{ NgDocActions.demo("SampleSizeComponent") }}
 
 ### Responsive button
+
+To make your button `responsive`, simply add the `data-responsive` attribute as shown below:
+
+```html
+<button dsyBtn data-responsive>Responsive</button>
+```
 
 {{ NgDocActions.demo("SampleResponsiveComponent") }}
 
@@ -46,8 +64,20 @@ import { ButtonDirective } from '@daisyng/kit/directives/button';
 
 ### Loading button
 
+To dynamically indicate that your button is in a `loading` state, bind the loading property to a value in your component as shown below:
+
+```html
+<button dsyBtn [loading]="isLoading">Button</button>
+``` 
+
 {{ NgDocActions.demo("SampleLoadingComponent") }}
 
 ### Button without click animation
+
+To disable `animations` on your button, simply add the `data-skip-animation` attribute as shown below:
+
+```html
+<button dsyBtn data-skip-animation>Button</button>
+```
 
 {{ NgDocActions.demo("SampleNoAnimationComponent") }}
